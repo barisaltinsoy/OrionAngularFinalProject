@@ -1,0 +1,62 @@
+<form [formGroup]="formData" (ngSubmit)="onSignUp()" class="text-center">
+
+  <div class="form-group">
+    <label for=""></label>
+    <input type="email" class="form-control" formControlName="email" id="" aria-describedby="emailHelpId" placeholder="">
+    <small id="emailHelpId" class=" form-text text-muted">Help text</small>
+  </div>
+
+  <div class="errors" *ngIf="
+    formData.get('email').errors
+    &&
+    formData.get('email').touched
+    ">
+    <div class = "alert alert-danger" role="alert" *ngIf="formData.get('email').errors?.['required']">
+      This field is required
+    </div>
+    <div class = "alert alert-danger" role="alert" *ngIf="formData.get('email').errors?.['email']">
+      This Email is invalid.
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for=""></label>
+    <input type="password" class="form-control" formControlName="password" id="" placeholder="">
+  </div>
+
+  <div class="errors" *ngIf="
+    formData.get('password').errors
+    &&
+    formData.get('password').touched
+    ">
+    <div class = "alert alert-danger" role="alert" *ngIf="formData.get('password').errors?.['required']">
+      This field is required
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for=""></label>
+    <input type="password" class="form-control" formControlName="passwordConfirm" id="" placeholder="">
+  </div>
+
+  <div class="errors" *ngIf="
+  formData.get('passwordConfirm').errors
+  &&
+  formData.get('passwordConfirm').touched
+  ">
+  <div class = "alert alert-danger" role="alert" *ngIf="formData.get('passwordConfirm').errors?.['required']">
+    This field is required
+  </div>
+</div>
+
+<div *ngIf="formData.errors?.['notMatch']">
+  <div class="alert alert-danger" role="alert">
+    Password must match.
+  </div>
+</div>
+
+  <button class="btn btn-info">SignUp</button>
+
+  </form>
+
+  <div>Already have an account? <a [routerLink]="['/signin']">Sign In</a> </div>

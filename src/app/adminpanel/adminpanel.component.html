@@ -1,0 +1,19 @@
+<form [formGroup]="adminForm" (submit)="onSubmit()">
+    <div class="mb-3">
+    <label for="name" class="form-label">Email address</label>
+    <input [formControlName]="'name'" type="text" class="form-control" id="name">
+    </div>
+  <div class="mb-3">
+    <label for="desc" class="form-label">Password</label>
+    <input [formControlName]="'desc'"type="text" class="form-control" id="desc">
+  </div>
+  <!-- <div class="mb-3">
+    <label for="exampleInputtext1" class="form-label">text</label>
+    <input type="text" class="form-control" id="exampleInputtext1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputtext1" class="form-label">text</label>
+    <input type="text" class="form-control" id="exampleInputtext1">
+  </div> -->
+      <button type="submit" class="btn btn-primary">Submit</button>
+</form>

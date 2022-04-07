@@ -1,0 +1,31 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "json-server",
+      "desc": "typicode",
+      "price": "5",
+      "qty": "2",
+      "imgUrls": [
+        "assets/bbq1.jpg",
+        "assets/bbq2.jpg",
+        "assets/bbq3.jpg"
+      ]
+    },
+    {
+      "name": "denemeName",
+      "desc": "denemeDesc",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
