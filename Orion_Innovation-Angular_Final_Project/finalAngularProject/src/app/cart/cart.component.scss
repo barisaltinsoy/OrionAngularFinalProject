@@ -1,0 +1,60 @@
+.empty{
+  height: 70vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.cart{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  flex-wrap: wrap;
+  &:not(:last-child){border-bottom: inset 2px oldplace;}
+  &>*{margin: 1rem;}
+  }
+
+  .imageBox{
+  flex: 0 0 6rem;
+  .img{
+    width: 100%;
+  }
+  }
+
+.desc{
+  flex: 1;
+}
+
+.qty{
+width: 3rem;
+text-align: center;
+}
+
+.checkout{
+  flex-basis: 100px;
+  display: grid;
+  justify-content: end;
+  grid-template-columns: repeat(2, 8rem);
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: .5rem;
+}
+
+b{
+  justify-self: end;
+}
+
+.btn{
+  grid-column: 1 / -1;
+}
+
+.imgBox{
+  width: 200px;
+  height: 200px;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+}

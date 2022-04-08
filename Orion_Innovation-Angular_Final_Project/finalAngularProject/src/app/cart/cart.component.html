@@ -1,0 +1,38 @@
+<!-- cart component -->
+<div class="empty" *ngIf="items.length < 1">
+  <div class="info">
+    <h4>No product in cart</h4>
+    <a routerLink="" class="btn btn-success">Continue Shopping</a>
+  </div>
+</div>
+
+<ng-container *ngIf="items.length > 0">
+  <div class="cart" *ngFor="let item of items; let i = index">
+  <i class="fa fa-trash text-danger" aria-hidden="true" (click)="onDelete(i)"></i>
+  <div class="imgBox">
+    <img [src]="item.imgUrls[0]" alt="" class="img">
+  </div>
+  <div class="desc">
+    {{ item.desc}}
+  </div>
+  <div class="price">
+    {{ item.price | currency }}
+  </div>
+  <input type="number" class="qty" [value]="item.qty" (blur)="validateInput($event, i)">
+  <div class="subtotal">
+    {{ item.price * item.qty | currency }}
+  </div>
+</div>
+
+<div class="checkout">
+  <div>Subtotal</div>
+  <b>$0</b>
+  <div>Shipping</div>
+  <b>$0</b>
+  <div>Total</div>
+  <b>{{ total | currency }}</b>
+
+  <button class="btn btn-success" (click)="onCheckOut()">Checkout</button>
+</div>
+
+</ng-container>

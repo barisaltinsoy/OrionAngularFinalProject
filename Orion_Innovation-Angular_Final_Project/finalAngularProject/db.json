@@ -1,0 +1,55 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "BBQ",
+      "desc": "Portable BBQ",
+      "price": "400",
+      "qty": "27",
+      "imgUrls": [
+        "assets/bbq1.jpg",
+        "assets/bbq2.jpg",
+        "assets/bbq3.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Knife Sharpener",
+      "desc": "Knife Sharpener for Chefs",
+      "price": "280",
+      "qty": "50",
+      "imgUrls": [
+        "assets/masat1.jpg",
+        "assets/masat2.jpg",
+        "assets/masat3.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Knife",
+      "desc": "Chef Knife",
+      "price": "650",
+      "qty": "16",
+      "imgUrls": [
+        "assets/knife1.jpg",
+        "assets/knife2.jpg",
+        "assets/knife3.jpg"
+      ]
+    },
+    {
+      "name": "denemeName",
+      "desc": "denemeDesc",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
